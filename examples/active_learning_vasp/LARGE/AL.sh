@@ -6,6 +6,12 @@
 #SBATCH -c 2
 #SBATCH --time=3:00:00
 
+# The VASP calculations are now submitted through AiiDA.  Configure the code and
+# potential family by exporting ``AIIDA_VASP_CODE`` and
+# ``AIIDA_VASP_POTENTIAL_FAMILY`` (and optionally ``AIIDA_VASP_POTENTIAL_MAP``)
+# before running this script, or pass explicit command line options to
+# ``aiida_run``.
+
 # Run reference DFT calc.
 #module purge
 #module load intel_compiler/2019.5.281
