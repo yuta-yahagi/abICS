@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wrapper that delegates to the main aiida_run script in the parent directory.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$SCRIPT_DIR/../aiida_run" "$@"
